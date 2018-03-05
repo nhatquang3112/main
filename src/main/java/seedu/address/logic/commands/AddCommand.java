@@ -15,7 +15,7 @@ import seedu.address.model.person.exceptions.DuplicatePersonException;
  * Adds a person to the address book.
  */
 public class AddCommand extends UndoableCommand {
-
+    // Test Travis
     public static final String COMMAND_WORD = "add";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a person to the address book. "
