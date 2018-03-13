@@ -39,6 +39,8 @@ public class CommandTestUtil {
     public static final String VALID_ADDRESS_BOB = "Block 123, Bobby Street 3";
     public static final String VALID_TAG_HUSBAND = "husband";
     public static final String VALID_TAG_FRIEND = "friend";
+    public static final String VALID_DESCRIPTION_AMY = "Like skiing.";
+    public static final String VALID_DESCRIPTION_BOB = "Favourite pastime: Eating";
     public static final String VALID_TAG_UNUSED = "UNUSED"; //for testing only, do not use to build person
 
     public static final String NAME_DESC_AMY = " " + PREFIX_NAME + VALID_NAME_AMY;
