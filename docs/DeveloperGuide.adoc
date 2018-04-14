@@ -364,31 +364,22 @@ image::UndoRedoActivityDiagram.png[width="650"]
 // end::undoredo[]
 
 // tag::addToDo[]
-=== Add ToDo feature
+=== To-do list feature
 ==== Current Implementation
 
-The add to-dos mechanism is facilitated by `AddToDoCommand`, which resides inside `Logic` component. It supports adding ToDo objects to the address book. AddToDoCommand inherits from `UndoableCommand`.
+The To-do list feature is facilitated by `UniqueToDoList`, which resides inside `AddressBook`. It supports storing a list of to-do inside the address book.
+Each to-do has a content, showing the activities of the to-do and a status, indicating if the to-do is done or undone.
+A to-do, content and status are facilitated by `ToDo`, `Content` and `Status` respectively.
 
-Hence, AddToDoCommand can be undone using `UndoRedoStack`.
-With the extra layer, the AddToDoCommand that is undoable is implemented this way:
-[source,java]
-----
-public abstract class UndoableCommand extends Command {
-    @Override
-    public CommandResult execute() {
-        // ... undo logic ...
+The following figure shows the class diagram indicating the relationship between `ToDo`, `Content` and `Status`:
 
-        executeUndoableCommand();
-    }
-}
+image::AddressBookUniqueToDoListToDoClassDiagram.png[width="800"]
+Figure. Class diagram of AddressBook, UniqueToDoList, ToDo, Content and Status
 
-public class AddToDoCommand extends UndoableCommand {
-    @Override
-    public CommandResult executeUndoableCommand() {
-        // ... delete logic ...
-    }
-}
-----
+On a broader scale, the following figure shows the class diagram of `AddressBook`, `UniqueToDoList`, `ToDo`, `Content` and `Status`:
+
+image::AddressBookUniqueToDoListToDoClassDiagram.png[width="800"]
+Figure. Class diagram of AddressBook, UniqueToDoList, ToDo, Content and Status
 
 The to-dos in the to-do list are facilitated by `ToDo` class. Each `ToDo` object have a `Content` object, representing the content of the to-do.
 Address book stores all to-dos in `UniqueToDoList`.
