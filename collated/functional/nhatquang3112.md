@@ -294,7 +294,7 @@ public class EditToDoCommand extends UndoableCommand {
             + "by the index number used in the last to-do listing. "
             + "Content of the to-do will be overwritten by the input value.\n"
             + "Parameters: INDEX (must be a positive integer) "
-            + "[" + PREFIX_CONTENT + "CONTENT]\n"
+            + PREFIX_CONTENT + "CONTENT\n"
             + "Example: " + COMMAND_WORD + " 1 "
             + PREFIX_CONTENT + "Submit presentation scripts";
 

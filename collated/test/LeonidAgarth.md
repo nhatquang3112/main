@@ -1051,10 +1051,6 @@ public class WeeklyEventTest {
     private Group groupA2 = new GroupBuilder().withInformation("Group A").build();
     private Group groupB = new GroupBuilder().withInformation("Group B").build();
 
-    @Test
-    public void compare_equalGroups() throws Exception {
-        assertEquals(groupA, groupA2);
-    }
 
     @Test
     public void hashCodeAndString_test() {
@@ -1121,11 +1117,6 @@ public class WeeklyEventTest {
         groupA.removePerson(BENSON);
     }
 
-    @Test
-    public void compare_notEqualGroups() throws Exception {
-        assertNotEquals(groupA, groupB);
-    }
-}
 ```
 ###### \java\seedu\address\model\person\AddressTest.java
 ``` java
